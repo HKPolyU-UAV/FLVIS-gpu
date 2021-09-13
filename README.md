@@ -8,7 +8,7 @@ Set the correct path of your OpenCV in ````CMakeLists.txt````:
 find_package(OpenCV 4 REQUIRED PATHS your_path)
 ````
 ### 3 How to Use
-Turn on  ````use_gpu```` in ````sn943222072828_depth.yaml```` to enable fast detector and optical flow tracking.
+Turn on  ````use_gpu```` in ````/launch/d435i/sn943222072828_depth.yaml```` to enable fast detector and optical flow tracking.
 
 
 #  FLVIS
@@ -69,7 +69,7 @@ rostopic echo /camera/infra1/camera_info
 You will get the camera infomation like:
 <img src="others/camera_info.png">
 As shown, where the resolution is 640x480 and fx=384.16455078125; fy=384.16455078125; cx=320.2144470214844;cy=238.94403076171875. <br />
-Edit these information in the config yaml file (say: /launch/d435i/sn943222072828_depth.yaml):
+Edit these information in the config yaml file (say: ````/launch/d435i/sn943222072828_depth.yaml````):
 ```yaml
 image_width: 640
 image_height: 480
@@ -86,7 +86,7 @@ roslaunch flvis rviz_bag.launch
 roslaunch flvis flvis_d435i_depth.launch
 ````
 #### 5.2 D435i Camera Stero Mode
-Like what we did in 5.1.2, we need to config the sn943222072828_stereo.yaml <br />
+Like what we did in 5.1.2, we need to config the ````/launch/d435i/sn943222072828_stereo.yaml```` <br />
 Note that, by default the two camera share the same intrinsic parameters, and the baseline length is 0.05m:
 ```yaml
 cam0_intrinsics: [384.16455078125, 384.16455078125, 320.2144470214844, 238.94403076171875]#fx fy cx cy
