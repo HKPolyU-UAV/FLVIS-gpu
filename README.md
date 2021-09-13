@@ -1,3 +1,16 @@
+#  FLVIS-gpu
+This repository is a GPU-accelerated version FLVIS. If you want to achieve best performance on your machine, we recommend you to use it without hesitation.
+### 1 Prerequisite
+The dependency is almost the same as original FLVIS. Besides, you need a cuda version OpenCV. We only test it under OpenCV 4.5.1
+### 2 How to Compile
+Set the correct path of your OpenCV in ````CMakeLists.txt````:
+````
+find_package(OpenCV 4 REQUIRED PATHS your_path)
+````
+### 3 How to Use
+Turn on  ````use_gpu```` in ````sn943222072828_depth.yaml```` to enable fast detector and optical flow tracking.
+
+
 #  FLVIS
 ## Feedback Loop Based Visual Inertial SLAM
 
